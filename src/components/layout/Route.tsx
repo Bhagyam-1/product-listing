@@ -1,7 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ProductDetails from "../../pages/ProductDetails";
-import CompareProducts from "../../pages/CompareProducts";
 import Layout from "./Layout";
+import { lazy } from "react";
+
+const ProductDetails = lazy(() => import("../../pages/ProductDetails"));
+const CompareProducts = lazy(() => import("../../pages/CompareProducts"));
 
 const wrapContentWithLayout = (content: React.ReactElement) => {
     return (
