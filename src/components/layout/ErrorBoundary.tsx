@@ -1,5 +1,4 @@
 import { Component, ReactNode } from 'react';
-import styles from './ErrorBoundary.module.css';
 import { MdError } from 'react-icons/md';
 
 interface Props {
@@ -16,12 +15,6 @@ class ErrorBoundary extends Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = { hasError: false };
-
-        window.onerror = (message, source, lineno, colno, error) => {
-            this.setState({ hasError: true, error: error || new Error(message as string) });
-            // Prevent default error overlay
-            return true;
-        };
 
         window.onunhandledrejection = (event) => {
             this.setState({
