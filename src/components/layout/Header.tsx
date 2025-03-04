@@ -1,7 +1,7 @@
 import { TiSortAlphabeticallyOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Header = () => {
     return (
         <header className="px-6 py-3 flex items-center gap-3 bg-gradient-to-r from-tertiary-background to-secondary-background shadow-lg rounded-md">
             <Link to="/">
@@ -12,4 +12,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Header;
