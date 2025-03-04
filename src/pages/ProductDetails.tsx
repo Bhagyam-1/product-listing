@@ -74,6 +74,7 @@ const ProductDetails = () => {
                 loading={loading}
                 onChange={handlePageChange}
                 rowClassName={(record) => highlightedIds.includes(record.key) ? "bg-yellow-200" : ""}
+                scroll={{ x: 1000, y: 500 }}
             />
         </section>
     )
